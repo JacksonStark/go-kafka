@@ -1,0 +1,13 @@
+[2021-10-06 22:00:02,831] INFO Registered kafka:type=kafka.Log4jController MBean (kafka.utils.Log4jControllerRegistration$)
+[2021-10-06 22:00:02,987] ERROR Exiting Kafka due to fatal exception (kafka.Kafka$)
+org.apache.kafka.common.config.ConfigException: Invalid value 0 # typically 3 as we scale for configuration group.initial.rebalance.delay.ms: Not a number of type INT
+	at org.apache.kafka.common.config.ConfigDef.parseType(ConfigDef.java:742)
+	at org.apache.kafka.common.config.ConfigDef.parseValue(ConfigDef.java:490)
+	at org.apache.kafka.common.config.ConfigDef.parse(ConfigDef.java:483)
+	at org.apache.kafka.common.config.AbstractConfig.<init>(AbstractConfig.java:108)
+	at org.apache.kafka.common.config.AbstractConfig.<init>(AbstractConfig.java:142)
+	at kafka.server.KafkaConfig.<init>(KafkaConfig.scala:1386)
+	at kafka.server.KafkaConfig.<init>(KafkaConfig.scala:1389)
+	at kafka.Kafka$.buildServer(Kafka.scala:67)
+	at kafka.Kafka$.main(Kafka.scala:87)
+	at kafka.Kafka.main(Kafka.scala)
