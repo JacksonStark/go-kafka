@@ -19,20 +19,6 @@ const (
 	broker3Address = "localhost:9095"
 )
 
-/* 
-	STEP 1: ensure latest version of Java is installed
-		https://www.oracle.com/java/technologies/javase-downloads.html
-
-	STEP 2: ensure zookeeper server and brokers 1 thru 3 are running 
-		bin/zookeeper-server-start.sh config/zookeeper.properties
-		bin/kafka-server-start.sh config/server.1.properties
-		bin/kafka-server-start.sh config/server.2.properties
-		bin/kafka-server-start.sh config/server.3.properties
-
-	STEP 3: create topic, point it to zookeeper cluster, specify partitions and RF
-		bin/kafka-topics.sh --create --topic my-kafka-topic --zookeeper localhost:2181 --partitions 3 --replication-factor 2
-*/
-
 func main() {
 	// create context
 	ctx := context.Background()
